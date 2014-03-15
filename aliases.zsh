@@ -1,0 +1,75 @@
+# Colorize output, add file type indicator, and put sizes in human readable format
+alias ls='ls -GFh'
+alias ll='ls -GFhl'
+
+alias df='df -H'
+alias du='du -ch'
+alias top='atop'
+
+# Practical commands
+alias c='clear'
+
+alias h='history'
+alias j='jobs -l'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+alias ports='netstat -tulanp'
+
+# Git stuff
+alias g='git'
+
+# The rest of my fun git aliases
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gl='git pull --prune'
+alias gp='git push origin HEAD'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gcam='git commit -a -m'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gb='git branch'
+alias gs='git status' # upgrade your git if -sb breaks for you. it's fun.
+alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
+perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
+
+# More advanved
+alias fastwlan='sudo iwconfig wlan0 power off'
+
+# copy with a progress bar.
+alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
+
+# Apache
+alias apache='sudo service apache2'
+alias apache.start='apache start'
+alias apache.stop='apache stop'
+alias apache.reload='apache reload'
+alias apache.restart='apache restart'
+alias apache.log="tail -f /var/log/apache2/error.log | sed 's/\\n/\n/g'"
+
+# System
+alias update='sudo apt-get update && sudo apt-get upgrade'
+
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+ 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+ 
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+ 
+## get GPU ram on desktop / laptop## 
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
