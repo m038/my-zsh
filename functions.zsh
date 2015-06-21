@@ -50,3 +50,7 @@ function restore() {
         echo "COMMIT;"
     ) | mysql -u"root" -p"root" "$1"
 }
+
+function ext-ip () {
+    curl http://ipecho.net/plain; echo;
+}
