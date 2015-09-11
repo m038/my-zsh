@@ -37,12 +37,16 @@ alias gcam='git commit -a -m'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gb='git branch'
+alias gbv='git branch -v'
 alias gs='git status' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
 perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 alias gama='git ls-files --modified | xargs git add -u'
 alias ga='git add'
 alias gaa='git add -u'
+alias gf='git fetch'
+alias gm='git merge'
+alias gr='git remote -a'
 
 # More advanced
 alias fastwlan='sudo iwconfig wlan0 power off'
