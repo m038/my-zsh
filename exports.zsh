@@ -4,6 +4,9 @@
 export PATH=$PATH:~/.scripts/sourcefabric/
 export PATH=$PATH:~/.scripts/services/
 
+# ZSH Autocomplete paths
+export FPATH=$FPATH:~/.zsh/completion
+
 # Set default console Java to 1.6
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home
 #export ANDROID_SDK_ROOT=/opt/boxen/homebrew/opt/android-sdk

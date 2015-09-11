@@ -7,7 +7,7 @@ alias du='du -ch'
 alias top='atop'
 
 # Practical commands
-alias c='clear'
+alias cl='clear'
 
 alias h='history'
 alias j='jobs -l'
@@ -19,8 +19,12 @@ alias nowdate='date +"%d-%m-%Y"'
 
 alias ports='netstat -tulanp'
 
+# clipboard
+alias xc='xclip'
+
 # Git stuff
 alias g='git'
+eval "$(hub alias -s)"
 
 # The rest of my fun git aliases
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -40,7 +44,7 @@ alias gama='git ls-files --modified | xargs git add -u'
 alias ga='git add'
 alias gaa='git add -u'
 
-# More advanved
+# More advanced
 alias fastwlan='sudo iwconfig wlan0 power off'
 
 # copy with a progress bar.
