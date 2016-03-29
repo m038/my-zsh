@@ -6,6 +6,9 @@ alias df='df -H'
 alias du='du -ch'
 alias top='atop'
 
+alias c='xclip -selection clipboard'
+alias v='xclip -selection clipboard -o'
+
 # Practical commands
 alias cl='clear'
 
