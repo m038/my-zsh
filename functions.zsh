@@ -55,3 +55,4 @@ function restore() {
 function ext-ip () {
     curl http://ipecho.net/plain; echo;
 }
+

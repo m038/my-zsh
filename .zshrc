@@ -14,3 +14,4 @@ source ~/.zsh/hitch.zsh
 if [[ -f ~/.zsh/custom.zsh ]]; then
     source ~/.zsh/custom.zsh
 fi;
+

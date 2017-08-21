@@ -9,6 +9,12 @@ alias top='atop'
 alias c='xclip -selection clipboard'
 alias v='xclip -selection clipboard -o'
 
+alias realtime='/usr/bin/time'
+alias parallel='parallel --no-notice'
+
+# fasd
+eval "$(fasd --init auto)"
+
 # Practical commands
 alias cl='clear'
 
@@ -51,6 +57,8 @@ alias gaa='git add -u'
 alias gf='git fetch'
 alias gm='git merge'
 alias gr='git remote -v'
+alias gcp='git cherry-pick'
+alias gcpn='gcp -n'
 
 alias gpr='git pull-request'
 
@@ -90,3 +98,5 @@ alias cpuinfo='lscpu'
  
 ## get GPU ram on desktop / laptop## 
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+alias platformspeedup='.local/bin/sshuttle -r root@138.201.90.51 136.243.150.175'
