@@ -13,7 +13,9 @@ alias realtime='/usr/bin/time'
 alias parallel='parallel --no-notice'
 
 # fasd
-eval "$(fasd --init auto)"
+if [ -x "$(command -v fasd)" ]; then
+    eval "$(fasd --init auto)"
+fi
 
 # Practical commands
 alias cl='clear'
@@ -33,7 +35,9 @@ alias xc='xclip'
 
 # Git stuff
 alias g='git'
-eval "$(hub alias -s)"
+if [ -x "$(command -v hub)" ]; then
+    eval "$(hub alias -s)"
+fi
 
 # The rest of my fun git aliases
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
