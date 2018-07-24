@@ -14,6 +14,7 @@ bindkey "^F"      forward-char                         # ctrl-f
 bindkey "^B"      backward-char                        # ctrl-b
 bindkey "^[[H"    beginning-of-line
 bindkey "^[[F"    end-of-line
-bindkey -v   # Default to standard emacs bindings, regardless of editor string
+#bindkey -v   # Default to standard emacs bindings, regardless of editor string
+bindkey -e   # Default to standard emacs bindings, regardless of editor string
 #bindkey "^[OH" beginning-of-line
 #bindkey "^[OF" end-of-line
