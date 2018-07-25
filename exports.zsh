@@ -3,6 +3,9 @@
 if [ -d ~/.composer/vendor/bin/ ]; then
     export PATH=$PATH:~/.composer/vendor/bin/
 fi
+if [ -d ~/.config/composer/vendor/bin/ ]; then
+    export PATH=$PATH:~/.config/composer/vendor/bin/
+fi
 
 # ZSH Autocomplete paths
 export FPATH=$FPATH:~/.zsh/completion
