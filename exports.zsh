@@ -21,6 +21,11 @@ if [ -d ~/Dev/android-sdk-linux/ ]; then
     export PATH=$PATH:~/Dev/android-sdk-linux/platform-tools
 fi
 
+# Custom scripts
+if [ -d ~/.scripts/ ]; then
+    export PATH=$PATH:~/.scripts
+fi
+
 # Set default console Java to 1.6
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home
 #export ANDROID_SDK_ROOT=~/Dev/android-sdk-linux/tools/android-sdk
