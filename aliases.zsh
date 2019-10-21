@@ -63,11 +63,16 @@ alias gf='git fetch'
 alias gfo='gf origin'
 alias gm='git merge'
 alias gmom='gm origin/master'
+alias gpom='g pull origin master'
 alias gr='git remote -v'
 alias gcp='git cherry-pick'
 alias gcpn='gcp -n'
-
 alias gpr='git pull-request'
+alias gt='git tag --sort=v:refname'
+
+# Composer
+alias c='composer'
+alias cg='composer global'
 
 # More advanced
 alias fastwlan='sudo iwconfig wlan0 power off'
