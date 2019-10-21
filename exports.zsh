@@ -21,7 +21,7 @@ if [ -d ~/Dev/android-sdk-linux/ ]; then
     export PATH=$PATH:~/Dev/android-sdk-linux/platform-tools
 fi
 
-# Regular scripts
+# Custom scripts
 if [ -d ~/.scripts/ ]; then
     export PATH=$PATH:~/.scripts
 fi
