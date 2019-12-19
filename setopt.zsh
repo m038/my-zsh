@@ -84,3 +84,6 @@ setopt NUMERIC_GLOB_SORT
 # I don't know why I never set this before.
 setopt EXTENDED_GLOB	
 
+# Case insensitive globbing
+setopt nocaseglob 
+
