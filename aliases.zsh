@@ -63,7 +63,9 @@ alias gf='git fetch'
 alias gfo='gf origin'
 alias gm='git merge'
 alias gmom='gm origin/master'
-alias gpom='g pull origin master'
+alias gpl='git pull'
+alias gplo'gpl origin'
+alias gplom='gplo master'
 alias gr='git remote -v'
 alias gcp='git cherry-pick'
 alias gcpn='gcp -n'
@@ -79,17 +81,6 @@ alias fastwlan='sudo iwconfig wlan0 power off'
 
 # copy with a progress bar.
 alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
-
-# Apache
-alias apache='sudo service apache2'
-alias apache.start='apache start'
-alias apache.stop='apache stop'
-alias apache.reload='apache reload'
-alias apache.restart='apache restart'
-alias apache.log="tail -f /var/log/apache2/error.log | sed 's/\\n/\n/g'"
-
-# System
-alias update='sudo apt-get update && sudo apt-get upgrade'
 
 ## pass options to free ## 
 alias meminfo='free -m -l -t'
@@ -110,5 +101,3 @@ alias cpuinfo='lscpu'
  
 ## get GPU ram on desktop / laptop## 
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
-
-alias platformspeedup='.local/bin/sshuttle -r root@138.201.90.51 136.243.150.175'
