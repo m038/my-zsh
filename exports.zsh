@@ -1,5 +1,13 @@
 # Global composer binaries
 
+# Not default on some linux distros
+if [ -d ~/bin/ ]; then
+    export PATH=$PATH:/bin
+fi
+if [ -d ~/sbin/ ]; then
+    export PATH=$PATH:/sbin/
+fi
+
 if [ -d ~/.composer/vendor/bin/ ]; then
     export PATH=$PATH:~/.composer/vendor/bin/
 fi
@@ -26,14 +34,21 @@ if [ -d ~/.scripts/ ]; then
     export PATH=$PATH:~/.scripts
 fi
 
-# Set default console Java to 1.6
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home
-#export ANDROID_SDK_ROOT=~/Dev/android-sdk-linux/tools/android-sdk
-
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
-export CLICOLOR=1
-export LSCOLORS=Gxfxcxdxbxegedabagacad
+# See colors.zsh
+#export CLICOLOR=1
+#export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-r
 
 # Enable color in grep
 #export GREP_OPTIONS='--color=auto'
